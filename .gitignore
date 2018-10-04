@@ -74,3 +74,6 @@ typings/
 # IDEs
 *.idea
 .idea
+
+#PAW files for testing
+paw-requests/
