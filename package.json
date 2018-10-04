@@ -1,10 +1,13 @@
 {
   "name": "inspiration-station",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "inspirational quotes from pinterest api",
   "main": "server.js",
+  "engines": {
+    "node": "8.11.1"
+  },
   "scripts": {
-    "test": "mocha",
+    "test": "node test.js",
     "start": "node server.js"
   },
   "author": "Phyllis Wong",
