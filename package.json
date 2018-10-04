@@ -1,0 +1,17 @@
+{
+  "name": "inspiration-station",
+  "version": "1.0.0",
+  "description": "inspirational quotes from pinterest api",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "Phyllis Wong",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "morgan": "^1.9.1"
+  }
+}
