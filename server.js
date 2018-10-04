@@ -6,9 +6,9 @@ const morgan = require('morgan');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
 // const mongoose = require('mongoose');
-const port = process.env.PORT;
+const PORT = process.env.PORT;
 
-const quotesController = require('./controllers/quotes');
+const quotesController = require('./controllers/quotes')(app);
 
 // MIDDLEWARE
 app.use(methodOverride('_method'));
@@ -22,7 +22,7 @@ app.engine('hbs', exphbs({defaultLayout: 'main', extname: 'hbs'}));
 app.set('view engine', 'hbs');
 
 // ROUTES
-app.use('/', quotesController);
+// app.use(quotesController);
 
 // 404 page
 // app.get('*', (req, res) => {
@@ -34,6 +34,6 @@ app.use('/', quotesController);
 // mongoose.connect( mongoUri, { useNewUrlParser: true });
 // mongoose.set('debug', true);
 
-app.listen(port, () => {
-  console.log(`App listening on ${port}`)
+app.listen(PORT, () => {
+  console.log(`App listening on ${PORT}`)
 });
