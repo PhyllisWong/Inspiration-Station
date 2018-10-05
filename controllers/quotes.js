@@ -12,7 +12,8 @@ module.exports = function(app) {
   fs.readFile('./json/quotes.json', 'utf-8', (err, data) => {
     if (err) throw err;
     quotesArray = JSON.parse(data);
-    console.log(quotesArray[0].quote)
+    let int = Math.floor(Math.random() * quotesArray.length );
+    console.log(quotesArray[int].quote)
   });
 
   app.get('/', (req, res) => {
