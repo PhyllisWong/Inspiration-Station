@@ -2,3 +2,29 @@
 	background-color: black;
 	border: 1px solid black;
 }
+
+.thumbnail {
+	position: relative;
+	background-color: none;
+	border: 0 solid white;
+}
+
+.caption {
+	position: absolute;
+	top: 45%;
+	left: 0;
+	width: 100%;
+}
+
+.caption p {
+	color: white;
+	font-size: 5rem;
+}
+
+.img-fluid {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	max-width: 80%;
+	height: auto;
+	border-radius: 2rem;
+}

@@ -13,7 +13,8 @@ module.exports = function(app) {
     if (err) throw err;
     quotesArray = JSON.parse(data);
     let int = Math.floor(Math.random() * quotesArray.length );
-    console.log(quotesArray[int].quote)
+    // Send this to a template
+    console.log(quotesArray[int].quote) // <----- confirmed this returns a quote
   });
 
   app.get('/', (req, res) => {
