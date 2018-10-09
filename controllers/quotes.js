@@ -8,21 +8,25 @@ module.exports = function(app) {
   const fs = require('fs');
 
   let quotesArray = [];
-  let randomQuote = "";
+  let randomQuoteObj;
 
   fs.readFile('./json/quotes.json', 'utf-8', (err, data) => {
     if (err) throw err;
     quotesArray = JSON.parse(data);
-    let int = Math.floor(Math.random() * quotesArray.length );
-    // Send this to a template
-    // console.log(quotesArray[int].quote) // <----- confirmed this returns a quote
-    randomQuote = quotesArray[int].quote;
+
   });
 
   app.get('/', (req, res) => {
-    res.render('index', { quote: randomQuote });
+    let int = Math.floor(Math.random() * quotesArray.length );
+    // Send this to a template
+    // console.log(quotesArray[int].quote) // <----- confirmed this returns a quote
+    randomQuoteObj = quotesArray[int];
+    console.log(randomQuoteObj);
+    res.render('index', { quote: randomQuoteObj.quote, author: randomQuoteObj.author });
   });
 
+  // Get a new quote
+  // Wire this up to a button
   app.get('/quotes', (req, res)=> {
     res.json(quotesArray);
   });
