@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 // const mongoose = require('mongoose');
 const PORT = process.env.PORT;
 
-const quotesController = require('./controllers/quotes')(app);
+const memesController = require('./controllers/meme')(app);
 
 // MIDDLEWARE
 app.use(methodOverride('_method'));
