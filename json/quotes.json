@@ -1,11 +1,11 @@
 
 [
-	{
+  {
     "category"  : "Life",
-	  "author"    : "Carol Burnett",
-	  "quote"     : "Only I can change my life. No one can do it for me.",
+    "author"    : "Carol Burnett",
+    "quote"     : "Only I can change my life. No one can do it for me.",
     "id"        : 1
-	},
+  },
   {
     "category"  : "Best",
     "author"    : "St. Jerome",
@@ -27,7 +27,7 @@
   {
     "category"  : "Failure",
     "author"    : "Og Mandino",
-    "quote"     : "Failure will never overtake me if my determination to succeed is string enough.",
+    "quote"     : "Failure will never overtake me if my determination to succeed is strong enough.",
     "id"        : 5
   },
   {
@@ -119,5 +119,11 @@
     "author"    : "Robert H Schuller",
     "quote"     : "I'd rather attempt to do something great and fail, than attempt to do nothing and succeed.",
     "id"        : 20
+  },
+  {
+    "category"  : "Fear",
+    "author"    : "Mark Twain",
+    "quote"     : "Courage is resistance to fear, mastery of fear – not absence of fear.",
+    "id"        : 21
   }
 ]
