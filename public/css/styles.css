@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed');
 
-.navbar-default .navbar-brand {
-	color: #5ca74c;
+:root {
+	--main-green-color: #5ca74c;
+}
 
+.navbar-default .navbar-brand {
+	color: var(--main-green-color);
 }
 
 .navbar-default {
@@ -14,8 +17,8 @@
 }
 
 .btn-primary {
-	background-color: #5ca74c;
-	border: 1px solid #5ca74c;
+	background-color: var(--main-green-color);
+	border: 1px solid var(--main-green-color);
 	margin-right: 5px;
 }
 

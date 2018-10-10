@@ -10,16 +10,19 @@ module.exports = function(app) {
   let randomImgObj;
   let randomQuoteObj;
 
+  // read the quotes from json file
   fs.readFile('./json/quotes.json', 'utf-8', (err, data) => {
     if (err) throw err;
     quotesArray = JSON.parse(data);
   });
 
+  // read the images from json file
   fs.readFile('./json/images.json', 'utf-8', (err, data) => {
     if (err) throw err;
     imagesArray = JSON.parse(data);
   });
 
+  // serve up quote with image
   app.get('/', (req, res) => {
     const imgInt = getRandomImgInt();
     const quoteInt = getRandomQuoteInt();
@@ -28,6 +31,7 @@ module.exports = function(app) {
     res.render('index', { image: randomImgObj.url, quote: randomQuoteObj.quote, author: randomQuoteObj.author });
   });
 
+  // randomize the image and quote with these ints
   function getRandomQuoteInt() {
     return int = Math.floor(Math.random() * quotesArray.length );
   }
