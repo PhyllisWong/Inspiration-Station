@@ -2,11 +2,25 @@
 
 <!-- NATURE IMAGE WITH INSPIRATIONAL QUOTE -->
 <div class="row" id="box-search">
+  <form class="new-meme" action="/meme" method="POST">
+    <button class="btn btn-primary" type="submit" >save</button>
+  </form>
+
   <div class="thumbnail text-center">
     <img src="{{image}}" class="img-fluid" alt="responsive image" >
     <div class="caption">
       <h2>{{quote}}</h2>
       <p>~ {{author}}</p>
     </div>
+  </div>
+
+  <!--Comment form-->
+  {{> comment-form}}
+  <hr>
+  <div id="comments">
+
+      {{#each comments}}
+        {{> comment}}
+      {{/each}}
   </div>
 </div>

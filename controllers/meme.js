@@ -4,6 +4,7 @@
 
 module.exports = function(app) {
   const fs = require('fs');
+  const MemeSchema = require('../models/meme');
 
   let quotesArray = [];
   let imagesArray = [];
@@ -29,6 +30,23 @@ module.exports = function(app) {
     randomImgObj = imagesArray[imgInt];
     randomQuoteObj = quotesArray[quoteInt];
     res.render('index', { image: randomImgObj.url, quote: randomQuoteObj.quote, author: randomQuoteObj.author });
+  });
+
+  // CREATE saves a meme to the database
+  app.post('/meme', (req, res) => {
+    MemeSchema.create(req.body).then((meme) => {
+      res.redirect('/');
+    }).catch((err) => {
+      console.log(err.message);
+    })
+  });
+
+  // SHOW: Show one meme
+  app.get('/meme/:id', (req, res) => {
+    MemeSchema.findById(req.params.id)
+      .then((meme) => {
+        res.render('/'); // Always show a new meme
+      })
   });
 
   // randomize the image and quote with these ints

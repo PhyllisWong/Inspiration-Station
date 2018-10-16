@@ -22,6 +22,13 @@
 	margin-right: 5px;
 }
 
+.row.btn.btn-primary {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
 .thumbnail {
 	position: relative;
 	background-color: none;
