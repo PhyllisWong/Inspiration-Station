@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const PORT = process.env.PORT;
 
 const memesController = require('./controllers/meme')(app);
@@ -30,9 +30,9 @@ app.set('view engine', 'hbs');
 // })
 
 // Mongoose Connection
-// const mongoUri = process.env.MONGODB_URI;
-// mongoose.connect( mongoUri, { useNewUrlParser: true });
-// mongoose.set('debug', true);
+const mongoUri = process.env.MONGODB_URI;
+mongoose.connect( mongoUri, { useNewUrlParser: true });
+mongoose.set('debug', true);
 
 app.listen(PORT, () => {
   console.log(`App listening on ${PORT}`)

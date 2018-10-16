@@ -4,8 +4,6 @@ const app = express();
 const MemeSchema = require('../models/meme.js');
 const Comment = require('../models/comment.js');
 
-
-
 // ***************  ROUTES  **************** //
 
 // CREATE Comment
@@ -32,6 +30,5 @@ app.delete('/meme/:id/comments/:commentId', (req, res) => {
       res.status(400).send(err)
     })
 });
-
 
 module.exports = app;

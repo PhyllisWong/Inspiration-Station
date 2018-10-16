@@ -65,7 +65,6 @@ module.exports = function(app) {
     randomImgObj = imagesArray[imgInt];
     randomQuoteObj = quotesArray[quoteInt];
     res.render('index', { image: randomImgObj.url, quote: randomQuoteObj.quote, author: randomQuoteObj.author });
-
   });
 
   // Get a new QUOTE
@@ -81,5 +80,4 @@ module.exports = function(app) {
     randomImgObj = imagesArray[imgInt];
     res.render('index', { image: randomImgObj.url, quote: randomQuoteObj.quote, author: randomQuoteObj.author });
   });
-
 };

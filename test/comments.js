@@ -9,8 +9,6 @@ describe('Comments', () => {
   it('should create with valid attributes at POST /posts', (done) => {
 
     let comment = { title: "Test Comment Title", body: "Test Post Summary" };
-
-
     Comment.findOneAndRemove(comment, () => {
       Comment.find((err, comments) => {
         let commentCount = comments.count;

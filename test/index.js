@@ -6,9 +6,7 @@ chai.use(chaiHttp);
 
 // Describe what you are testing
 describe('Home Page', () => {
-  // Describe what should happen
   it('Should have a home page', (done) => {
-    // In this case we test that the home page loads
     chai.request('localhost:8080')
       .get('/')
       .end((err, res) => {
@@ -16,7 +14,6 @@ describe('Home Page', () => {
           done(err)
         }
         res.status.should.be.equal(200);
-        // call done if the test completed successfully
         done()
       })
   })
