@@ -24,7 +24,7 @@ describe('Comments', () => {
             Comment.find((err, comments) => {
               commentCount.should.be.equal(comments.count + 1);
               res.should.have.status(200);
-              done();  // ends anything that is async
+              done();
             });
           });
       });
